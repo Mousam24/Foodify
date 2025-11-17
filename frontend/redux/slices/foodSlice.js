@@ -17,7 +17,7 @@ const foodSlice = createSlice({
 export default foodSlice.reducer;
 
 export const fetchFoods = createAsyncThunk("Food/fetch", async () => {
-  const res = await fetch(`http://localhost:5000/api/foods`);
+  const res = await fetch(`https://foodify-back.onrender.com/api/foods`);
   const res2 = await res.json();
   return res2.foods;
 });
